@@ -1,6 +1,4 @@
-import * as test from './actions';
-import {createSelector} from '@ngrx/store';
-
+import * as types from './actions';
 
 
 export interface State {
@@ -15,17 +13,17 @@ const initialState: State = {
   error: null
 };
 
-export function reducer(state = initialState, action: test.Actions): State {
+export function reducer(state = initialState, action: types.Actions): State {
   switch (action.type) {
 
-    case test.CATEGORIES_GET_REQUEST: {
+    case types.CATEGORIES_GET_REQUEST: {
       return  {
         ...state,
         is_fetching: true
       };
     }
 
-    case test.CATEGORIES_GET_SUCCESS: {
+    case types.CATEGORIES_GET_SUCCESS: {
       return  {
         ...state,
         is_fetching: false,
@@ -33,7 +31,7 @@ export function reducer(state = initialState, action: test.Actions): State {
       };
     }
 
-    case test.CATEGORIES_GET_ERROR: {
+    case types.CATEGORIES_GET_ERROR: {
       return  {
         ...state,
         is_fetching: false,
