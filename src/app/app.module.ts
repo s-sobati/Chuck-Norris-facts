@@ -11,10 +11,11 @@ import {rootReducer} from './store';
 import {ApiModule} from './api/api.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppSharedModuleModule} from './app-shared.module';
-import {CategoriesComponent} from './Components/Categories';
+import {CategoriesComponent} from './Components/Home/Categories';
 import {CategoriesEffects} from './store/categories/effects';
 import {HeaderComponent} from './Components/Header';
 import {HomeComponent} from './Components/Home';
+import {FactsEffects} from './store/facts/effects';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import {HomeComponent} from './Components/Home';
     ApiModule,
     StoreModule.forRoot(rootReducer, {}),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    EffectsModule.forRoot([CategoriesEffects]),
+    EffectsModule.forRoot([CategoriesEffects, FactsEffects]),
     BrowserAnimationsModule,
   ],
   providers: [],

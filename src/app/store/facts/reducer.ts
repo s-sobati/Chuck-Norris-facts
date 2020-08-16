@@ -1,9 +1,16 @@
 import * as types from './actions';
 
+export interface Fact {
+  category: string[] | null;
+  icon_url: string;
+  id: string;
+  url: string;
+  value: string;
+}
 
 export interface State {
   is_fetching: boolean;
-  data: string[] | null;
+  data: Fact[] | null;
   error: any;
 }
 
@@ -16,14 +23,14 @@ const initialState: State = {
 export function reducer(state = initialState, action: types.Actions): State {
   switch (action.type) {
 
-    case types.CATEGORIES_GET_REQUEST: {
+    case types.FACTS_GET_REQUEST: {
       return  {
         ...state,
         is_fetching: true
       };
     }
 
-    case types.CATEGORIES_GET_SUCCESS: {
+    case types.FACTS_GET_SUCCESS: {
       return  {
         ...state,
         is_fetching: false,
@@ -31,7 +38,7 @@ export function reducer(state = initialState, action: types.Actions): State {
       };
     }
 
-    case types.CATEGORIES_GET_ERROR: {
+    case types.FACTS_GET_ERROR: {
       return  {
         ...state,
         is_fetching: false,
