@@ -1,0 +1,8 @@
+//in this way we could change color pallet during render time.
+// it could be useful for implementation of different color mode
+:root {
+  --dark-grey: #a0a0a0;
+}
+
+$dark-grey: var(--dark-grey);
+
