@@ -8,6 +8,7 @@ import {environment} from '../environments/environment';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {EffectsModule} from '@ngrx/effects';
 import {rootReducer} from './store';
+import {ApiModule} from './api/api.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {rootReducer} from './store';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ApiModule,
     StoreModule.forRoot(rootReducer, {}),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     EffectsModule.forRoot([]),
