@@ -2,7 +2,11 @@
 // it could be useful for implementation of different color mode
 :root {
   --dark-grey: #a0a0a0;
+  --navy-blue: #4051b5;
+  --text-white: #FFFFFF;
 }
 
 $dark-grey: var(--dark-grey);
+$navy-blue: var(--navy-blue);
+$text-white: var(--text-white);
 

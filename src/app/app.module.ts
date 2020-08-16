@@ -13,11 +13,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppSharedModuleModule} from './app-shared.module';
 import {CategoriesComponent} from './Components/Categories';
 import {CategoriesEffects} from './store/categories/effects';
+import {HeaderComponent} from './Components/Header';
+import {HomeComponent} from './Components/Home';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    HeaderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
