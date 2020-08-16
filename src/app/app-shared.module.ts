@@ -1,11 +1,8 @@
 // ----- Modules -----
 import {NgModule} from '@angular/core';
-/*import {
-  MatButtonModule,
-  MatListModule,
-} from '@angular/material';*/
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatButtonModule} from '@angular/material/button';
 import {CommonModule} from '@angular/common';
 
 
@@ -14,10 +11,12 @@ import {CommonModule} from '@angular/common';
   imports: [
     CommonModule,
     MatGridListModule,
+    MatButtonModule,
     MatListModule,
   ],
   exports: [
     MatGridListModule,
+    MatButtonModule,
     MatListModule,
   ],
   providers: []
