@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {State} from './store';
-import * as testActions from './store/test/actions';
+import * as factsAction from './store/facts/actions';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +9,10 @@ import * as testActions from './store/test/actions';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
   constructor(private store: Store<State>) {}
 
   ngOnInit(): void {
-    this.store.dispatch(new testActions.TestAction('Hello!'));
+    this.store.dispatch(new factsAction.GetFactsAction());
   }
 }
