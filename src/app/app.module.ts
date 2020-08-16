@@ -9,6 +9,8 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {EffectsModule} from '@ngrx/effects';
 import {rootReducer} from './store';
 import {ApiModule} from './api/api.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppSharedModuleModule} from './app-shared.module';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import {ApiModule} from './api/api.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AppSharedModuleModule,
     ApiModule,
     StoreModule.forRoot(rootReducer, {}),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     EffectsModule.forRoot([]),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
