@@ -1,5 +1,5 @@
 import {Action} from '@ngrx/store';
-import {Fact} from './reducer';
+import {Facts} from './reducer';
 
 
 export const FACTS_GET_REQUEST = '[Facts] get facts request';
@@ -14,7 +14,7 @@ export class GetFactsAction implements Action {
 export class GetFactsSuccessAction implements Action {
   readonly type = FACTS_GET_SUCCESS;
 
-  constructor(public payload: Fact[]) {
+  constructor(public payload: Facts) {
   }
 }
 
