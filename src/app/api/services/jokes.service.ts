@@ -16,7 +16,7 @@ export class JokesService {
   }
 
   getFactsData(): Observable<any> {
-    const url = this.configUrl + '/search?query=animal';
+    const url = this.configUrl + '/search?query=all';
     return this.http.get(url);
   }
 }

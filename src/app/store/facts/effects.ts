@@ -14,7 +14,7 @@ export class FactsEffects {
               private jokesService: JokesService) {}
 
   @Effect()
-  categoriesRequest$: Observable<Action> = this.actions$.pipe(
+  factsRequest$: Observable<Action> = this.actions$.pipe(
     ofType(factsActions.FACTS_GET_REQUEST),
     switchMap(data => {
       return this.jokesService.getFactsData().pipe(

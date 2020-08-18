@@ -1,11 +1,18 @@
 import * as types from './actions';
 
 export interface Fact {
-  category: string[] | null;
+  categories: string[] | null;
   icon_url: string;
   id: string;
   url: string;
   value: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface Facts {
+  result: Fact[];
+  total: number;
 }
 
 export interface State {
@@ -34,7 +41,7 @@ export function reducer(state = initialState, action: types.Actions): State {
       return  {
         ...state,
         is_fetching: false,
-        data: action.payload
+        data: action.payload.result
       };
     }
 
