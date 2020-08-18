@@ -1,0 +1,12 @@
+<div class="row">
+  <h2 class="col-12 text-center source-list_headline" >Category = {{selectedCategory$ | async}}</h2>
+  <div *ngIf="isFetching$ | async " class="col-12 d-flex justify-content-center align-items-center">
+    <mat-spinner></mat-spinner>
+  </div>
+  <app-no-result class="col-12" *ngIf="(isFetching$ | async) === false && (sourceList$ | async)?.length === 0"></app-no-result>
+  <ng-container *ngIf="(isFetching$ | async) === false">
+  <ng-container *ngFor="let item of sourceList$ | async ">
+    <app-fact-card class="col" [data]="item" ></app-fact-card>
+  </ng-container>
+  </ng-container>
+</div>

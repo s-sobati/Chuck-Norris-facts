@@ -5,8 +5,14 @@ import {Component} from '@angular/core';
   template: `
     <app-header></app-header>
     <app-categories></app-categories>
+    <div class="container-fluid">
+      <div class="row">
+    <app-source-list class="col-12 col-sm-6 border-right"></app-source-list>
+    <app-custom-list class="col-12 col-sm-6"></app-custom-list>
+      </div>
+    </div>
   `,
-  styles: [``]
+  styleUrls: ['./index.scss']
 })
 export class HomeComponent {
 
