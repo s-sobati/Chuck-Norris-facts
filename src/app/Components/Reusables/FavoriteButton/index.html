@@ -1,0 +1,6 @@
+<button *ngIf="!isFaved" mat-icon-button color="primary" (click)="addToFavorites(id)" aria-label="Button For adding this fact from favorites">
+  <mat-icon>add</mat-icon>
+</button>
+<button *ngIf="isFaved" mat-icon-button color="warn" (click)="deleteFromFavorites(id)" aria-label="Button For deleting this fact from favorites">
+  <mat-icon>delete</mat-icon>
+</button>

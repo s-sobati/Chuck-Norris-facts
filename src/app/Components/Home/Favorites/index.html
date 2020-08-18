@@ -1,0 +1,6 @@
+<div class="row">
+  <h2 class="col-12 text-center favorites_headline">Favorites</h2>
+    <ng-container *ngFor="let item of favorites$ | async ">
+      <app-fact-card class="col" [data]="item" ></app-fact-card>
+    </ng-container>
+</div>

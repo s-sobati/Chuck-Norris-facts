@@ -13,16 +13,19 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppSharedModuleModule} from './app-shared.module';
 import {CategoriesComponent} from './Components/Home/Categories';
 import {CategoriesEffects} from './store/categories/effects';
-import {HeaderComponent} from './Components/Header';
 import {HomeComponent} from './Components/Home';
 import {FactsEffects} from './store/facts/effects';
+import {SourceListComponent} from './Components/Home/SourceList';
+import {CustomListComponent} from './Components/Home/Favorites';
+import {ListsEffects} from './store/lists/effects';
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoriesComponent,
-    HeaderComponent,
     HomeComponent,
+    SourceListComponent,
+    CustomListComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import {FactsEffects} from './store/facts/effects';
     ApiModule,
     StoreModule.forRoot(rootReducer, {}),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    EffectsModule.forRoot([CategoriesEffects, FactsEffects]),
+    EffectsModule.forRoot([CategoriesEffects, FactsEffects, ListsEffects]),
     BrowserAnimationsModule,
   ],
   providers: [],
