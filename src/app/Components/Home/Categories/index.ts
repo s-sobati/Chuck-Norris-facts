@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import * as categoriesAction from '../../../store/categories/actions';
+import * as listsAction from '../../../store/lists/actions';
 import {Store} from '@ngrx/store';
 import {State} from '../../../store';
 import * as selectors from 'src/app/store/categories/selectors';
@@ -25,6 +26,6 @@ export class CategoriesComponent implements OnInit {
 
   public onSelectCategory(item: string): void {
     this.selectedCategory = item;
-    console.log(item);
+    this.store.dispatch(new listsAction.MakeSourceListAction(item));
   }
 }
