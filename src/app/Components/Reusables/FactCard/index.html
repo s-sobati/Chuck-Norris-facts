@@ -1,0 +1,15 @@
+<mat-card class="card_container">
+  <mat-card-header>
+    <div mat-card-avatar class="card_avatar" [style.background-image]="'url('+ data.icon_url +')'"></div>
+    <mat-card-title class="card_title">{{data.id}}</mat-card-title>
+    <mat-card-subtitle class="card_create-time">{{data.created_at | date}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{data.value}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <app-favorite-button [id]="data.id" ></app-favorite-button>
+  </mat-card-actions>
+</mat-card>
