@@ -1,0 +1,21 @@
+//in this way we could change color pallet during render time.
+// it could be useful for implementation of different color mode
+:root {
+  --dark-grey: #a0a0a0;
+  --navy-blue: #4051b5;
+  --text-white: #FFFFFF;
+  --primary-blue: #007bff;
+  --main-green: #28a745;
+  --special-yellow: #ffd740;
+  --primary-purple: #673ab7;
+  --main-warning: #f44336;
+}
+
+$dark-grey: var(--dark-grey);
+$navy-blue: var(--navy-blue);
+$text-white: var(--text-white);
+$primary-blue: var(--primary-blue);
+$special-yellow: var(--special-yellow);
+$primary-purple: var(--primary-purple);
+$main-warning: var(--main-warning);
+

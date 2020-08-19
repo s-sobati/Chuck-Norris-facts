@@ -1,0 +1,10 @@
+@import "src/styles/colors";
+
+.category_main {
+  border: 2px solid $dark-grey;
+  margin-top: 20px;
+  min-height: 150px;
+}
+.category_button {
+  margin: 20px 0;
+}
